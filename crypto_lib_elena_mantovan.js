@@ -45,7 +45,7 @@ return wordCount;
 
 function count_words_by(string_of_words, letter = ' ') {
     let wordCount = 0;
-    
+
         // Parcours de la chaîne de caractères
         for (let i = 0; i < string_of_words.length; i++) {
             if (string_of_words.charAt(i) !== letter) {
@@ -58,3 +58,23 @@ function count_words_by(string_of_words, letter = ' ') {
     
 }
     
+// Partie 4: 
+// Fonction qui vérifie si une lettre est une voyelle
+function is_a_vowel(letter) {
+    // Vérifie si la lettre est présente dans le tableau global "vowels"
+    return vowels.includes(letter);
+}
+// Fonction qui compte le nombre de voyelles dans une phrase
+function count_vowels(string_of_words) {
+    let count = 0; // Initialisation du compteur de voyelles à 0
+    
+     // Parcours de la chaîne de caractères
+    for (let i = 0; i < string_of_words.length; i++) {
+        // Vérifier si le caractère actuel est une voyelle
+        if (is_a_vowel(string_of_words.charAt(i))) {
+            count++; // Incrémenter le compteur si c'est une voyelle
+        }
+    }
+    
+    return count; // Retourner le nombre total de voyelles trouvées
+}
