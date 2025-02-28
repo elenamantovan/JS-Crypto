@@ -8,7 +8,7 @@ function what_are_words_worth() {
     let length = valeur_entree.length;
     // Demande la confirmation
     let confirmation = confirm('Votre entrée "' + valeur_entree + '" comporte ' + length + ' caractère(s).');
-    // Renvoie la valeur booléenne basée sur la confirmation
+    // Renvoie la valeur booléenne basée sur la confirmationr
     return confirmation;
 
 
