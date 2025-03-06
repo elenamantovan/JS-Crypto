@@ -59,12 +59,8 @@ function count_words_by(string_of_words, letter = ' ') {
 }
     
 // Partie 4: 
-// Fonction qui vérifie si une lettre est une voyelle
-function is_a_vowel(letter) {
-    // Vérifie si la lettre est présente dans le tableau global "vowels"
-    return vowels.includes(letter);
-}
 // Fonction qui compte le nombre de voyelles dans une phrase
+
 function count_vowels(string_of_words) {
     let count = 0; // Initialisation du compteur de voyelles à 0
     
@@ -79,11 +75,32 @@ function count_vowels(string_of_words) {
     return count; // Retourner le nombre total de voyelles trouvées
 }
 
-// Partie 4: 
+
+// Partie 5: 
 // Fonction qui compte le nombre de consonnes dans une phrase.
 
 function count_consonants(string_of_words) {
     let count = 0;
     for (let i = 0; i < string_of_words.length; i++) count += (string_of_words.charAt(i) !== " " && !vowels.includes(string_of_words.charAt(i))) ? 1 : 0;
     return count;
+}
+
+
+// Partie 6: 
+//Supprime toutes les occurrences d'un caractère donné dans une phrase.
+
+function remove(string_of_words, caracter) {
+   let result = ''; // Initialise une chaîne vide pour stocker le résultat
+
+   // Parcourt chaque caractère de la phrase
+   for (let i = 0; i < string_of_words.length; i++) {
+       // Vérifie si le caractère actuel est différent du caractère à supprimer
+       if (string_of_words.charAt(i) !== caracter) {
+           // Ajoute le caractère à la chaîne résultat
+           result += string_of_words.charAt(i);
+       }
+   }
+
+   // Retourne la nouvelle phrase sans les caractères supprimés
+   return result;
 }
