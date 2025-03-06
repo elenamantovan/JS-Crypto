@@ -78,3 +78,12 @@ function count_vowels(string_of_words) {
     
     return count; // Retourner le nombre total de voyelles trouvées
 }
+
+// Partie 4: 
+// Fonction qui compte le nombre de consonnes dans une phrase.
+
+function count_consonants(string_of_words) {
+    let count = 0;
+    for (let i = 0; i < string_of_words.length; i++) count += (string_of_words.charAt(i) !== " " && !vowels.includes(string_of_words.charAt(i))) ? 1 : 0;
+    return count;
+}
