@@ -145,3 +145,11 @@ function crypto(a_string, a_number) {
 
     return result;
 }
+
+
+//Partie 9:
+// Fonction qui chiffre un texte en utilisant le chiffrement de César avec un nombre paramètre :
+function decrypt(a_string, a_number) { return a_string.replace(/[a-z]/g, c => String.fromCharCode((c.charCodeAt(0) - 97 - a_number + 26) % 26 + 97)); }
+
+
+//Partie 10:
