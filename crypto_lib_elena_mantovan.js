@@ -106,8 +106,8 @@ function remove(string_of_words, caracter) {
 }
 
 
-// Partie 6: 
-//Fonction qui supprime toutes les occurrences de plusieurs caractères dans une phrase.
+// Partie 7: 
+// Fonction qui supprime toutes les occurrences de plusieurs caractères dans une phrase.
 
 function remove_strings(string_of_words, caracters) {
     let result = ''; // Chaîne pour stocker le résultat final
@@ -123,5 +123,25 @@ function remove_strings(string_of_words, caracters) {
     }
 
     // Retourne la phrase nettoyée
+    return result;
+}
+
+// Partie 8:
+// Fonction qui chiffre un texte en utilisant le chiffrement de César :
+
+function crypto(a_string, a_number) {
+    let result = ""; // Chaine de sortie chiffrée
+
+    for (let i = 0; i < a_string.length; i++) {
+        let char = a_string.charAt(i); // Récupérer le caractère actuel
+
+        if (char >= 'a' && char <= 'z') { // Vérifier si c'est une lettre minuscule
+            let newCharCode = ((char.charCodeAt(0) - 97 + a_number) % 26) + 97;
+            result += String.fromCharCode(newCharCode);
+        } else {
+            result += char; // Garder les espaces et caractères spéciaux inchangés
+        }
+    }
+
     return result;
 }
