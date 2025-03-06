@@ -104,3 +104,24 @@ function remove(string_of_words, caracter) {
    // Retourne la nouvelle phrase sans les caractères supprimés
    return result;
 }
+
+
+// Partie 6: 
+//Fonction qui supprime toutes les occurrences de plusieurs caractères dans une phrase.
+
+function remove_strings(string_of_words, caracters) {
+    let result = ''; // Chaîne pour stocker le résultat final
+
+    // Parcourt chaque caractère de la phrase
+    for (let i = 0; i < string_of_words.length; i++) {
+        let letter = string_of_words.charAt(i); // Récupère la lettre actuelle
+
+        // Vérifie si la lettre actuelle ne fait PAS partie des caractères à supprimer
+        if (!caracters.includes(letter)) {
+            result += letter; // Ajoute la lettre à la chaîne résultat
+        }
+    }
+
+    // Retourne la phrase nettoyée
+    return result;
+}
