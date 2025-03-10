@@ -153,3 +153,10 @@ function decrypt(a_string, a_number) { return a_string.replace(/[a-z]/g, c => St
 
 
 //Partie 10:
+// Fonction qui trouve la clé de decryptage
+function enigma(crypted_string) {
+    // On teste toutes les clés possibles de 1 à 25
+    for (let i = 1; i < 26; i++)
+        // Si le texte déchiffré contient plus de 5 mots, on affiche la clé
+        if (count_words(decrypt(crypted_string, i)) > 5) console.log("Clé:", i);
+}
